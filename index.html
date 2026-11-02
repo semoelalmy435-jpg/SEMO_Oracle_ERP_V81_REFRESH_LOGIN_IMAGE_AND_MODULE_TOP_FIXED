@@ -1,88 +1,57 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SEMO ERP - إعادة توجيه</title>
-  <meta http-equiv="refresh" content="0; url=./index.html.html" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEMO Oracle ERP - Login</title>
+  <meta http-equiv="refresh" content="0; url=./login.html" />
   <style>
-    :root {
-      --bg: #0b2032;
-      --panel: #12365d;
-      --line: #2d5f8a;
-      --text: #eef6ff;
-      --muted: #bed8ee;
-    }
-    * { box-sizing: border-box; }
     html, body {
       margin: 0;
-      min-height: 100%;
-      background: linear-gradient(150deg, #0a1d2d, #12365d 55%, #0c2439);
-      color: var(--text);
-      font-family: Arial, Tahoma, sans-serif;
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #0d4d7e 0%, #0a3d62 100%);
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      overflow: hidden;
     }
     body {
       display: grid;
       place-items: center;
-      min-height: 100vh;
-      padding: 20px;
+      color: #fff;
     }
-    .box {
-      width: min(560px, 100%);
-      background: rgba(11, 32, 50, 0.72);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 28px 24px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+    .loader {
       text-align: center;
+      padding: 24px 28px;
+      border-radius: 16px;
+      background: rgba(13, 31, 49, 0.4);
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.18);
     }
-    .title {
-      margin: 0 0 12px;
-      font-size: 27px;
-      font-weight: 800;
+    .loader strong {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
     }
-    .text {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.8;
-      font-size: 15px;
+    .loader span {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
     }
-    .link {
-      display: inline-block;
-      margin-top: 16px;
-      color: #9fe7ff;
-      text-decoration: none;
-      font-weight: 700;
-    }
-    .link:hover { text-decoration: underline; }
   </style>
   <script>
-    (function () {
-      var candidates = [
-        './index.html.html',
-        './SEMO_Oracle_ERP_V81_REFRESH_LOGIN_IMAGE_AND_MODULE_TOP_FIXED(1).html'
-      ];
-
-      var current = (location.pathname.split('/').pop() || 'index.html');
-      var target = candidates.find(function (path) {
-        return path !== './' + current && !location.pathname.endsWith(path);
-      });
-
-      if (target) {
-        try {
-          location.replace(target);
-        } catch (e) {
-          location.href = target;
-        }
+    (() => {
+      const appUrl = './login.html';
+      try {
+        location.replace(appUrl);
+      } catch (e) {
+        location.href = appUrl;
       }
     })();
   </script>
 </head>
 <body>
-  <div class="box">
-    <h1 class="title">SEMO ERP</h1>
-    <p class="text">يتم الآن توجيه النظام إلى الملف الرئيسي للتطبيق...</p>
-    <a class="link" href="./index.html.html">اضغط هنا إذا لم يتم التوجيه تلقائياً</a>
+  <div class="loader">
+    <strong>SEMO ERP</strong>
+    <span>جاري توجيهك إلى شاشة الدخول...</span>
   </div>
 </body>
 </html>
